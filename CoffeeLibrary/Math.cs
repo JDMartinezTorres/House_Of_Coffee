@@ -15,18 +15,18 @@ namespace CoffeeLibrary
         public void GetCoffeeSales()
         {
             Console.WriteLine("Please enter total small coffee sales");
-            double SmallCoffeeSales = CheckInput(Console.ReadLine());
-            reports.TotalS = SmallCoffeeSales * CoffeeRetail[(int)Coffee.small];
+            reports.SmallCoffeeSales = CheckInput(Console.ReadLine());
+            reports.TotalS = reports.SmallCoffeeSales * CoffeeRetail[(int)Coffee.small];
             Console.WriteLine($"Total small coffee sales are {reports.TotalS:c}.");
 
             Console.WriteLine("Please enter total medium coffee sales");
-            double MediumCoffeeSales = CheckInput(Console.ReadLine());
-            reports.TotalM = MediumCoffeeSales * CoffeeRetail[(int)Coffee.medium];
+            reports.MediumCoffeeSales = CheckInput(Console.ReadLine());
+            reports.TotalM = reports.MediumCoffeeSales * CoffeeRetail[(int)Coffee.medium];
             Console.WriteLine($"Total medium coffee sales are {reports.TotalM:c}.");
 
             Console.WriteLine("Please enter total large coffee sales");
-            double LargeCoffeeSales = CheckInput(Console.ReadLine());
-            reports.TotalL = LargeCoffeeSales * CoffeeRetail[(int)Coffee.large];
+            reports.LargeCoffeeSales = CheckInput(Console.ReadLine());
+            reports.TotalL = reports.LargeCoffeeSales * CoffeeRetail[(int)Coffee.large];
             Console.WriteLine($"Total large coffee sales are {reports.TotalL:c}.");
 
             Console.ReadLine();
@@ -35,13 +35,13 @@ namespace CoffeeLibrary
         public void GetSnackSales()
         {
             Console.WriteLine("Please enter total egg sandwich sales");
-            double EggSandwichSales = CheckInput(Console.ReadLine());
-            reports.TotalEs = EggSandwichSales * SnackRetail[(int)Snack.egg_sandwich];
+            reports.EggSandwichSales = CheckInput(Console.ReadLine());
+            reports.TotalEs = reports.EggSandwichSales * SnackRetail[(int)Snack.egg_sandwich];
             Console.WriteLine($"Total egg sandwich sales are {reports.TotalEs:c}.");
 
             Console.WriteLine("Please enter total chicken biscuit sales");
-            double ChickenBiscuitSales = CheckInput(Console.ReadLine());
-            reports.TotalCb = ChickenBiscuitSales * SnackRetail[(int)Snack.chicken_biscuit];
+            reports.ChickenBiscuitSales = CheckInput(Console.ReadLine());
+            reports.TotalCb = reports.ChickenBiscuitSales * SnackRetail[(int)Snack.chicken_biscuit];
             Console.WriteLine($"Total chicken biscuit sales are {reports.TotalCb:c}.");
             Console.ReadLine();
         }

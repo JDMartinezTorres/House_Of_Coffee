@@ -10,6 +10,8 @@ namespace CoffeeLibrary
     {
         public double TotalS, TotalM, TotalL;
         public double TotalEs, TotalCb;
+        public double SmallCoffeeSales, MediumCoffeeSales, LargeCoffeeSales;
+        public double EggSandwichSales, ChickenBiscuitSales;
         public double TotalCost, TotalIncome;
 
         public void SalesReport()
@@ -23,8 +25,8 @@ namespace CoffeeLibrary
 
         public void CostReport()
         {
-            double CoffeeCost = (TotalS * CoffeeNet[(int)Coffee.small]) + (TotalM * CoffeeNet[(int)Coffee.medium]) + (TotalL * CoffeeNet[(int)Coffee.large]);
-            double SnackCost = (TotalEs * SnackNet[(int)Snack.chicken_biscuit]) + (TotalCb * SnackNet[(int)Snack.egg_sandwich]);
+            double CoffeeCost =(SmallCoffeeSales * CoffeeNet[(int)Coffee.small]) + (MediumCoffeeSales * CoffeeNet[(int)Coffee.medium]) + (LargeCoffeeSales * CoffeeNet[(int)Coffee.large]);
+            double SnackCost = (EggSandwichSales * SnackNet[(int)Snack.egg_sandwich]) + (ChickenBiscuitSales * SnackNet[(int)Snack.chicken_biscuit]);
             TotalCost = CoffeeCost + SnackCost;
             Console.WriteLine($"The total overhead cost is {TotalCost:c}");
             Console.ReadLine();
